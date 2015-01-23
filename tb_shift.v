@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2015/01/20 10:00:10
+// Create Date: 2015/01/23 20:49:17
 // Design Name: 
-// Module Name: tb_test
+// Module Name: tb_shift
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_test;
+module tb_shift;
 	reg clk,rst;
 	wire [31:0] rom_data;
 	wire shift_ack;
@@ -30,6 +30,7 @@ module tb_test;
 	wire [7:0] rom_addr;
 	wire sum_en;
 	wire [3071:0] shift_row;
+	
 	read_rom read(
 		.clk_in(clk),	//input clk
 		.read_data(rom_data),	//read data from rom
@@ -46,7 +47,7 @@ module tb_test;
 		.addra(rom_addr),  // input wire [7 : 0] addra
 		.douta(rom_data)  // output wire [31 : 0] douta
 	);
-	shift_seed shift(
+	shift_seed_single shift(
 		.clk_in(clk),
 		.rst(rst),
 		.seed(seed),
@@ -55,7 +56,8 @@ module tb_test;
 		.sum_en(sum_en),
 		.shift_row(shift_row)
 	);
-
+	
+	
 	initial
 		begin
 			clk = 0;

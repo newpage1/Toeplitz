@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2015/01/23 10:43:51
+// Create Date: 2015/01/23 21:28:15
 // Design Name: 
-// Module Name: tb_module
+// Module Name: write_fifo
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,22 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module tb_module;
-	reg clk,rst,rd_en;
-	wire [31:0] dout;
-	wire empty;
-	module_fifo read_fifo(
-		.clk_in(clk),
-		.rst(rst),
-		.rd_en(rd_en),
-		.fifo_out(dout),
-		.fifo_empty(empty)
-	);
-	initial
-		begin
-			clk = 0;
-			rst = 0;
-			rd_en = 1;
-		end 
-	always #2.5 clk = ~clk;
+module write_fifo(
+
+    );
 endmodule

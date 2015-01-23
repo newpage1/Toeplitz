@@ -26,9 +26,7 @@ module sum_row(
 	input [3071:0] shift_row,
 	input sum_en,
 	input [31:0] coeff,
-	//input almost_empty,
 	output [3071:0] final_result,
-	output [6:0] adress,
 	output read_en,
 	output write_en
     );
@@ -40,8 +38,6 @@ module sum_row(
 	assign write_en = write_en_out; 
 	reg read_en_out;
 	assign read_en = read_en_out;
-	reg [6:0] addr_out;
-	assign adress = addr_out;
 	reg [7:0] counter;
 	wire flag;
 	assign flag = counter[7];
@@ -65,7 +61,6 @@ module sum_row(
 			read_en_out = 0;
 			counter = 8'b0;
 			read_counter = 6'b000000;
-			addr_out = 7'b0000000;
 		end
 	
 	always@(posedge clk_in or posedge rst )
@@ -76,10 +71,9 @@ module sum_row(
 					state <= IDLE;
 					result_out <= 3072'b0;
 					write_en_out <= 0;
-					read_en_out <= 1;
+					read_en_out <= 0;
 					counter <= 8'b0;
 					read_counter <= 6'b000000;
-					addr_out <= 7'b0000000;
 				end
 			else
 				begin
@@ -88,9 +82,8 @@ module sum_row(
 						begin
 							coeff_in <= 32'b0; 
 							state <= PRE;
-							//result_out <= 3072'b0;
 							write_en_out <= 0;
-							read_en_out <= 1;
+							read_en_out <= 0;
 							counter <= 8'b0;
 							addr_out <= 7'b0000000;
 							read_counter <= 6'b000000;
@@ -101,7 +94,7 @@ module sum_row(
 							if(!flag&sum_en)
 								begin
 									state <= PLUS;
-									addr_out <= counter[6:0];
+									read_en_out <= 1;
 									$display("dsdssssssssssssssssssssssssssssssssssssssss");
 								end
 							if(flag&sum_en)
@@ -114,6 +107,7 @@ module sum_row(
 						begin
 							state <= GET;
 							counter <= counter + 1;
+							read_en_out <= 0;
 						end
 					GET:
 						begin
