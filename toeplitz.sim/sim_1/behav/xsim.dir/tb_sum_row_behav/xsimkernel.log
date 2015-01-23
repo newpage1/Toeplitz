@@ -1,3 +1,0 @@
-Running: xsim.dir/tb_sum_row_behav/xsimk.exe -simmode gui -wdb tb_sum_row_behav.wdb -simrunnum 0 -socket 11659
-Design successfully loaded
-Design Loading CPU Usage: 296 ms

@@ -1,1 +1,0 @@
---debug "typical" --relax -L "xil_defaultlib" -L "blk_mem_gen_v8_2" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_sum_row_behav" --prj "E:/Xilinx_Vivado_SDK_Win_2014.2_0612_1/vivado_projects/toeplitz/toeplitz.sim/sim_1/behav/tb_sum_row.prj" "xil_defaultlib.tb_sum_row" "xil_defaultlib.glbl" 

@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="blk_mem_synth_1" LaunchDir="E:/Xilinx_Vivado_SDK_Win_2014.2_0612_1/vivado_projects/toeplitz/toeplitz.runs/blk_mem_synth_1" FlowId="Vivado Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-</Runs>
-
