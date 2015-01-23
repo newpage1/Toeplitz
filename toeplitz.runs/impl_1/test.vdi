@@ -1,0 +1,121 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Tue Jan 20 17:01:55 2015
+# Process ID: 7492
+# Log file: E:/Xilinx_Vivado_SDK_Win_2014.2_0612_1/vivado_projects/toeplitz/toeplitz.runs/impl_1/test.vdi
+# Journal file: E:/Xilinx_Vivado_SDK_Win_2014.2_0612_1/vivado_projects/toeplitz/toeplitz.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source test.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'E:/Xilinx_Vivado_SDK_Win_2014.2_0612_1/vivado_projects/toeplitz/toeplitz.runs/blk_memory_synth_1/blk_memory.dcp' for cell 'ROM'
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+Loading clock regions from C:/Xlinx_2014.2/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z045/ClockRegion.xml
+Loading clock buffers from C:/Xlinx_2014.2/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z045/ClockBuffers.xml
+Loading clock placement rules from C:/Xlinx_2014.2/Vivado/2014.2/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from C:/Xlinx_2014.2/Vivado/2014.2/data\parts/xilinx/zynq/PinFunctions.xml...
+Loading package from C:/Xlinx_2014.2/Vivado/2014.2/data\parts/xilinx/zynq/zynq/xc7z045/ffg900/Package.xml
+Loading io standards from C:/Xlinx_2014.2/Vivado/2014.2/data\./parts/xilinx/zynq/IOStandards.xml
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Project 1-538] Ignoring constraints in dcp 'E:/Xilinx_Vivado_SDK_Win_2014.2_0612_1/vivado_projects/toeplitz/toeplitz.runs/blk_memory_synth_1/blk_memory.dcp'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 532.695 ; gain = 337.320
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 533.207 ; gain = 0.512
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 378b7097
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 954.625 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 2 Constant Propagation | Checksum: 378b7097
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 954.625 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 48 unconnected nets.
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-11] Eliminated 51 unconnected cells.
+Phase 3 Sweep | Checksum: 264c0cf0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 954.645 ; gain = 0.020
+Ending Logic Optimization Task | Checksum: 264c0cf0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 954.645 ; gain = 0.020
+Implement Debug Cores | Checksum: 986f63fc
+Logic Optimization | Checksum: 986f63fc
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Will skip clock gating for clocks with period < 3.13 ns.
+Ending Power Optimization Task | Checksum: 264c0cf0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 955.645 ; gain = 1.000
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 955.645 ; gain = 422.949
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045'
+Running DRC as a precondition to command place_design
+INFO: [Drc 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Runtime Estimator
+Phase 1 Placer Runtime Estimator | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 966.477 ; gain = 0.000
+
+Phase 2 Placer Initialization
+
+Phase 2.1 Placer Initialization Core
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 966.477 ; gain = 0.000
+Phase 2.1 Placer Initialization Core | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 966.477 ; gain = 0.000
+Phase 2 Placer Initialization | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 966.477 ; gain = 0.000
+ERROR: [Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+Ending Placer Task | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 966.477 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+30 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+
+    while executing
+"place_design "
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 20 17:02:38 2015...

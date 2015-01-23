@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Thu Jan 22 21:45:38 2015
+# Process ID: 9196
+# Log file: E:/Xilinx_Vivado_SDK_Win_2014.2_0612_1/vivado_projects/toeplitz/toeplitz.runs/fifo_generator_synth_1/fifo_generator.vds
+# Journal file: E:/Xilinx_Vivado_SDK_Win_2014.2_0612_1/vivado_projects/toeplitz/toeplitz.runs/fifo_generator_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fifo_generator.tcl
