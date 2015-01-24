@@ -87,6 +87,7 @@ module sum_row(
 							counter <= 8'b0;
 							addr_out <= 7'b0000000;
 							read_counter <= 6'b000000;
+							result_out <= 3072'b0;
 							$display("dsdssssssssssssssssssssssssssssssssssssssss");
 						end
 					PRE:
