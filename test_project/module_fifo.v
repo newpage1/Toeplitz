@@ -89,6 +89,7 @@ module module_fifo(
 					end
 				ADR:
 					begin
+						wr_en <= 0;
 						addra <= counter[6:0];
 						state <= PLUS;
 					end
@@ -114,6 +115,7 @@ module module_fifo(
 					end
 				WAIT:
 					begin
+						wr_en <= 0;
 						if(fifo_full)
 							state <= WAIT;
 						else

@@ -99,20 +99,21 @@ module shift_seed_single(
 							end
 						GET:						
 							begin
+								seed_ack_out <= 0;
+								sum_en_out <= 1;
+								state <= ONE;
+							end
+						ONE:
+							begin
+								cycle_counter <= cycle_counter + 1;
 								if(!cycle_flag)
 									begin
-										sum_en_out <= 1;
-										state <= ONE;
+										state <= TWO;
 									end
 								else
 									begin
 										state <= IDLE;
 									end
-							end
-						ONE:
-							begin
-								cycle_counter <= cycle_counter + 1;
-								state <= TWO;
 							end
 						TWO:
 							begin
@@ -129,7 +130,7 @@ module shift_seed_single(
 									end
 								if(!cycle_flag&flag)
 									begin
-										state <= GET;
+										state <= ONE;
 										counter <= 6'b0;
 									end
 							end
